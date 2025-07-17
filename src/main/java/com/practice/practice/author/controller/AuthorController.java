@@ -1,7 +1,6 @@
 package com.practice.practice.author.controller;
 
 import com.practice.practice.author.domain.Author;
-import com.practice.practice.author.dto.AuthorDetailDTO;
 import com.practice.practice.author.dto.AuthorSignUpDTO;
 import com.practice.practice.author.dto.AuthorUpdateDTO;
 import com.practice.practice.author.dto.CommonDTO;
