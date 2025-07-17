@@ -1,4 +1,4 @@
-package com.practice.practice.author.common;
+package com.practice.practice.common;
 
 import com.practice.practice.author.dto.CommonErrorDTO;
 import org.springframework.http.HttpStatus;
