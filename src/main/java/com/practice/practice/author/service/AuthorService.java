@@ -29,7 +29,8 @@ public class AuthorService {
         if (authorRepository.findByEmail(authorSignUpDTO.getEmail()).isPresent()) {
             throw new IllegalArgumentException("이미 가입된 이메일입니다.");
         }
-        authorRepository.save(authorSignUpDTO.authorFromEntity(authorSignUpDTO));
+        Author author = authorSignUpDTO.authorToEntity();
+        authorRepository.save(author);
     }
 
     // 회원 목록 조회
