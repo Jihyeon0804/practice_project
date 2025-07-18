@@ -5,6 +5,7 @@ import com.practice.practice.author.dto.AuthorSignUpDTO;
 import com.practice.practice.author.dto.AuthorUpdateDTO;
 import com.practice.practice.author.dto.CommonDTO;
 import com.practice.practice.author.service.AuthorService;
+import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -21,7 +22,8 @@ public class AuthorController {
     
     // 회원가입
     @PostMapping("/signUp")
-    public ResponseEntity<?> signUp(@RequestBody AuthorSignUpDTO authorSignUpDTO) {
+    public ResponseEntity<?> signUp(@Valid @RequestBody AuthorSignUpDTO authorSignUpDTO) {
+        // DTO에 있는 validation 어노테이션 (@NotEmpty, @Size 등)과 controller의 @Valid는 한 쌍
         authorService.signUp(authorSignUpDTO);
         return new ResponseEntity<>("회원 가입 완료", HttpStatus.CREATED);
     }
