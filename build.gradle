@@ -28,6 +28,8 @@ dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-data-jdbc'
 	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
 	implementation 'org.mybatis.spring.boot:mybatis-spring-boot-starter:3.0.4'
+	// 값 검증을 위한 의존성
+	implementation 'org.springframework.boot:spring-boot-starter-validation'
 
 	// java와 db를 연결해주는 driver
 	runtimeOnly 'org.mariadb.jdbc:mariadb-java-client'
